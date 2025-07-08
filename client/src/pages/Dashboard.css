@@ -1,0 +1,47 @@
+.dashboard-container {
+  padding: 40px;
+  text-align: center;
+  background-color: #f9fbff;
+  min-height: 100vh;
+}
+
+.dashboard-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  width: 300px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  color: #1f1f90;
+  margin-bottom: 10px;
+}
+
+.card button {
+  margin-top: 10px;
+  background-color: #1f1f90;
+  color: white;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #151574;
+}

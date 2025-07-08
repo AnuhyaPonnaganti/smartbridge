@@ -1,0 +1,44 @@
+.mentor-list-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.mentor-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.mentor-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  text-align: left;
+}
+
+.mentor-card h3 {
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.mentor-card p {
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.mentor-card button {
+  background-color: #0078d4;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.mentor-card button:hover {
+  background-color: #005a9e;
+}

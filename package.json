@@ -1,0 +1,48 @@
+{
+  "name": "miniproject",
+  "scripts": {
+    "start": "concurrently --raw \"npm run server\" \"npm run client\"",
+    "dev": "nodemon --legacy-watch server/server.js",
+    "server": "cd server && nodemon server.js",
+    "client": "cd client && npm start"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.10"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cloudinary": "^2.6.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "firebase": "^11.9.1",
+    "framer-motion": "^12.18.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.15.2",
+    "multer": "^2.0.1",
+    "multer-storage-cloudinary": "^4.0.0",
+    "nodemailer": "^7.0.3",
+    "react-router-dom": "^7.6.2",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "server.js",
+      "routes",
+      "controllers",
+      "config"
+    ],
+    "ext": "js,json",
+    "ignore": [
+      "node_modules",
+      ".git",
+      ".env",
+      "uploads",
+      "*.log",
+      "client/*",
+      "README.md"
+    ]
+  }
+}

@@ -1,0 +1,54 @@
+.submissions-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.submissions-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.no-submissions {
+  font-size: 1.2rem;
+  color: #888;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.submission-card {
+  background: #f7f7f7;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 0.2s ease;
+}
+
+.submission-card:hover {
+  transform: translateY(-5px);
+}
+
+.submission-card h3 {
+  margin-top: 0;
+  color: #0056b3;
+}
+
+.view-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.view-link:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,76 @@
+.upload-container {
+  background-color: #ffffff;
+  padding: 2rem;
+  width: 90%;
+  max-width: 500px;
+  margin: 4rem auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.upload-container h2 {
+  margin-bottom: 1.5rem;
+  color: #003366;
+  font-weight: 700;
+  font-size: 1.9rem;
+}
+
+.upload-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.upload-container input[type="text"],
+.upload-container input[type="email"],
+.upload-container input[type="url"],
+.upload-container input[type="file"],
+.upload-container textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+  background-color: #fafafa;
+}
+
+.upload-container input:focus,
+.upload-container textarea:focus {
+  border-color: #0077cc;
+  background-color: #fff;
+  outline: none;
+}
+
+.upload-container textarea {
+  resize: vertical;
+  min-height: 120px;
+  max-height: 250px;
+}
+
+.upload-container button {
+  background-color: #005fa3;
+  color: #fff;
+  border: none;
+  padding: 0.9rem 1rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.upload-container button:hover {
+  background-color: #004080;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 480px) {
+  .upload-container {
+    padding: 1.5rem 1rem;
+  }
+}
