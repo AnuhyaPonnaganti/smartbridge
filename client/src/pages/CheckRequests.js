@@ -6,7 +6,7 @@ const CheckRequests = () => {
 
   useEffect(() => {
     if (mentor && mentor.email) {
-      fetch(`http://localhost:5000/api/requests/${mentor.email}`)
+      fetch(`https://skillbridge-backend.onrender.com/api/requests/${mentor.email}`)
         .then(res => res.json())
         .then(data => setRequests(data))
         .catch(err => console.error("Error fetching requests:", err));

@@ -3,7 +3,7 @@ import React, { useEffect, useState, useRef, useCallback } from 'react';
 import io from 'socket.io-client';
 import './Chat.css';
 
-const socket = io('http://localhost:5000'); // change URL if deployed
+const socket = io('https://skillbridge-backend.onrender.com'); // change URL if deployed
 
 const Chat = ({ user }) => {
   const [receiver, setReceiver] = useState(null);
@@ -21,7 +21,7 @@ const Chat = ({ user }) => {
 
   const fetchUserList = async () => {
     try {
-      const res = await fetch('http://localhost:5000/api/users');
+      const res = await fetch("https://skillbridge-backend.onrender.com/api/users")
       const data = await res.json();
       setUserList(data.filter(u => u._id !== user._id));
     } catch (err) {
@@ -31,7 +31,7 @@ const Chat = ({ user }) => {
 
   const fetchMessages = async (otherUser) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/messages/${user._id}/${otherUser._id}`);
+      const res = await fetch(`https://skillbridge-backend.onrender.com/api/messages/${user._id}/${otherUser._id}`);
       const data = await res.json();
       setMessages(data);
       setReceiver(otherUser);

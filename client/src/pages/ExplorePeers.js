@@ -9,7 +9,7 @@ const ExplorePeers = () => {
   useEffect(() => {
     if (!currentUser?.email) return;
 
-    fetch(`http://localhost:5000/api/students/explore/${currentUser.email}`)
+    fetch(`https://skillbridge-backend.onrender.com/api/students/explore/${currentUser.email}`)
       .then(res => res.json())
       .then(data => {
         setPeers(data);

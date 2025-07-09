@@ -19,7 +19,15 @@ const io = socketIo(server, {
 });
 
 // Middleware
-app.use(cors());
+const allowedOrigins = [
+  'https://<your-vercel-domain>.vercel.app',
+  'http://localhost:3000'
+];
+
+app.use(cors({
+  origin: allowedOrigins,
+  credentials: true
+}));
 app.use(express.json());
 
 // Routes

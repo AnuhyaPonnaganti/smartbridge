@@ -73,7 +73,7 @@ router.post('/send-reset-email', async (req, res) => {
     const user = await User.findOne({ email });
     if (!user) return res.status(404).json({ error: 'User not found' });
 
-    const resetLink = `http://localhost:3000/reset-password/${user._id}`;
+    const resetLink = `https://smartbridge-nine.vercel.app/reset-password/${user._id}`;
 
     const transporter = nodemailer.createTransport({
       service: 'gmail',

@@ -7,7 +7,7 @@ const ResetPassword = () => {
 
   const handleReset = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/api/userProfile/reset-password/${user._id}`, {
+      const response = await fetch(`https://skillbridge-backend.onrender.com/api/userProfile/reset-password/${user._id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ newPassword })

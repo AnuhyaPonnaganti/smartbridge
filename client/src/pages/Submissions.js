@@ -7,7 +7,7 @@ const Submissions = () => {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/talents/all')
+    fetch('https://skillbridge-backend.onrender.com/api/talents/all')
       .then(res => res.json())
       .then(data => {
         setTalents(Array.isArray(data) ? data : []);

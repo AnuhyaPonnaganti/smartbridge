@@ -11,7 +11,7 @@ const sendResetEmail = async (toEmail, token) => {
     },
   });
 
-  const resetLink = `http://localhost:5173/confirm-reset/${token}`;
+  const resetLink = `https://smartbridge-nine.vercel.app/confirm-reset/${token}`;
 
   const mailOptions = {
     from: process.env.MAIL_USER,

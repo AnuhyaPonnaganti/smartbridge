@@ -26,7 +26,7 @@ const ProfileEdit = () => {
     if (!user) return;
 
     try {
-      const res = await fetch(`http://localhost:5000/api/userProfile/update/${user.email}`, {
+      const res = await fetch(`https://skillbridge-backend.onrender.com/api/userProfile/update/${user.email}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),

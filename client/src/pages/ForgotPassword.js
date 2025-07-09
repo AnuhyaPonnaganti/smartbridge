@@ -8,7 +8,7 @@ const ForgotPassword = () => {
   const handleSendResetLink = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch('http://localhost:5000/api/userProfile/send-reset-email', {
+      const res = await fetch('https://skillbridge-backend.onrender.com/api/userProfile/send-reset-email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email }),

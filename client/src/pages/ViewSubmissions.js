@@ -5,7 +5,7 @@ const ViewSubmissions = () => {
   const [submissions, setSubmissions] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/talents/all")
+    fetch("https://skillbridge-backend.onrender.com/api/talents/all")
       .then((res) => res.json())
       .then((data) => {
         if (Array.isArray(data)) {

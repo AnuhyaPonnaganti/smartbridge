@@ -29,7 +29,7 @@ const UploadTalent = () => {
     formData.append("userId", user._id);
 
     try {
-      const res = await fetch("http://localhost:5000/api/talents/upload", {
+      const res = await fetch("https://skillbridge-backend.onrender.com/api/talents/upload", {
         method: "POST",
         body: formData,
       });

@@ -4,7 +4,7 @@ const AdminDashboard = () => {
   const [students, setStudents] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/students")
+    fetch("https://skillbridge-backend.onrender.com/api/students")
       .then(res => res.json())
       .then(data => setStudents(data))
       .catch(err => console.error("Error loading students:", err));

@@ -6,7 +6,7 @@ const MentorList = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/mentors")
+    fetch("https://skillbridge-backend.onrender.com/api/mentors")
       .then(res => res.json())
       .then(data => {
         setMentors(data);
@@ -27,7 +27,7 @@ const MentorList = () => {
 
     const student = JSON.parse(localStorage.getItem("user"));
     if (student) {
-      fetch("http://localhost:5000/api/requests/send", {
+      fetch("https://skillbridge-backend.onrender.com/api/requests/send", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
