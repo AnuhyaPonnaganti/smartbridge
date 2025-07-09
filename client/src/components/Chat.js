@@ -3,8 +3,10 @@ import React, { useEffect, useState, useRef, useCallback } from 'react';
 import io from 'socket.io-client';
 import './Chat.css';
 
-const socket = io('https://skillbridge-backend.onrender.com'); // change URL if deployed
-
+//const socket = io('https://skillbridge-backend.onrender.com'); // change URL if deployed
+const socket = io("https://skillbridge-backend.onrender.com", {
+  transports: ['websocket'], // force proper protocol
+});
 const Chat = ({ user }) => {
   const [receiver, setReceiver] = useState(null);
   const [message, setMessage] = useState('');
