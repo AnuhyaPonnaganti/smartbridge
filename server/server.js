@@ -13,8 +13,9 @@ const app = express();
 const server = http.createServer(app); // ✅ create server instance
 const io = socketIo(server, {
   cors: {
-    origin: '*',
-    methods: ['GET', 'POST']
+    origin: allowedOrigins,
+    methods: ['GET', 'POST'],
+    credentials: true
   }
 });
 app.get("/", (req, res) => {
@@ -23,7 +24,7 @@ app.get("/", (req, res) => {
 
 // Middleware
 const allowedOrigins = [
-  'https://<your-vercel-domain>.vercel.app',
+  process.env.FRONTEND_URL,
   'http://localhost:3000'
 ];
 
