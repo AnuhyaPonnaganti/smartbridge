@@ -10,6 +10,10 @@ const socketIo = require('socket.io');
 
 // App setup
 const app = express();
+const allowedOrigins = [
+  process.env.FRONTEND_URL,
+  'http://localhost:3000'
+];
 const server = http.createServer(app); // ✅ create server instance
 const io = socketIo(server, {
   cors: {
@@ -23,11 +27,6 @@ app.get("/", (req, res) => {
 });
 
 // Middleware
-const allowedOrigins = [
-  process.env.FRONTEND_URL,
-  'http://localhost:3000'
-];
-
 app.use(cors({
   origin: allowedOrigins,
   credentials: true
