@@ -23,7 +23,8 @@ const io = socketIo(server, {
   }
 });
 app.get("/health", (req, res) => {
-  res.send("✅ SkillBridge Backend is running!   okk");
+  //res.send("✅ SkillBridge Backend is running!   okk");
+  res.json({ status: "ok" });
 });
 
 // Middleware
